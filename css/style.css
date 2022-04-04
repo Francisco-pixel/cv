@@ -1,0 +1,197 @@
+:root{
+    --h:0;
+    --s:0%;
+    --l:0%;
+    --hColor:0;
+    --sColor:0%;
+    --lColor:0%;
+    --space:2rem;
+}
+
+body,
+.l-aside,
+.r-aside,
+.l-aside__card-foto,
+.l-aside__profile,
+.l-aside-name,
+.l-aside-desc,
+.l-aside__info,
+.l-aside__contacto,
+.l-aside__contacto-detail,
+.barra,
+.barra__porciento,
+.barra-r,
+.barra__porciento-r,
+.r-aside-profile__title,
+.r-aside-profile__sub-title,
+.r-aside-profile__p
+{
+    background:hsl(
+        var(--h),
+        var(--s),
+        var(--l)
+    );
+    color:hsl(
+        var(--hColor),
+        var(--sColor),
+        var(--lColor)
+    );
+}
+body
+{
+--l:98%;
+height:100vh;
+transition:all 1s ease;
+}
+
+.section
+{
+    width:100%;
+    max-width:62.5rem;
+}
+/* l -aside */
+.l-aside
+{
+    --h:200;
+    --s:100%;
+    --l:20%;
+    padding:1rem;
+}
+/* Foto */
+.l-aside__card-foto
+{
+    --l:100%;
+    --wh:8rem;
+    width:var(--wh);
+    height:var(--wh);
+    overflow:hidden;
+    border-radius:50%;
+    position:relative;
+}
+.l-aside__foto
+{
+    object-fit:cover;
+}
+
+.l-aside__profile
+{
+    display:grid;
+    margin-bottom:var(--space);
+    gap:0.5rem;
+}
+.l-aside-desc
+{
+    --lColor:70%;
+}
+/* Info de contacto */
+.l-aside-contacto
+{
+    margin-top:var(--space);
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+}
+.l-aside__contacto-detail
+{
+    padding-left:1rem;
+    --lColor:70%;
+}
+.idioma
+{
+    display:grid;
+    gap:0.5rem;
+}
+.barra{
+    width:100%;
+    --l:25%;
+    height:0.5rem;
+}
+.barra__porciento{
+    width:0%;
+    height:inherit;
+    --l:40%;
+}
+
+/* Right aside */
+.r-aside
+{
+    --l:100%;
+    padding:1rem;
+}
+.r-aside-profile
+{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.r-aside-profile__p
+{
+    --lColor:50%;
+}
+
+.barra-r
+{
+    width:100%;
+    --l:95%;
+    height:1rem;
+}
+.barra__porciento-r
+{
+    --h:200;
+    --s:100%;
+    --l:50%;
+    width:0%;
+    height:inherit;
+}
+/* Componentes */
+.text--align-left-center{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    gap:0.5rem;
+}
+.border--bottom
+{
+    border-bottom:0.1rem solid hsla(0,0%,98%,0.5);
+}
+
+/* Estilos compartidos */
+.r-aside-profile__title,
+.r-aside-profile__sub-title
+{
+    --hColor:200;
+    --sColor:100%;
+    --lColor:20%;
+}
+.l-aside-name,
+.l-aside__contacto
+{
+    --lColor:90%;
+}
+.l-aside-name,
+.l-aside-desc
+{
+    text-align:center;
+}
+.contacto,
+.estudios,
+.profesion
+{
+    gap:0.5rem;
+}
+.barra__porciento-r,
+.barra__porciento
+{
+    transition:all 1s ease;
+}
+@media screen and (max-width:500px){
+    body
+    {
+        height:100%;
+        font-size:0.7rem;
+    }
+    .section
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
