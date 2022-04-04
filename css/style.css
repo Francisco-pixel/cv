@@ -194,4 +194,8 @@ transition:all 1s ease;
     {
         grid-template-columns: repeat(1,1fr);
     }
+    .barra-r
+{
+    height:0.5rem;
+}
 }
