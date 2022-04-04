@@ -188,14 +188,17 @@ transition:all 1s ease;
     body
     {
         height:100%;
-        font-size:0.7rem;
     }
     .section
     {
         grid-template-columns: repeat(1,1fr);
     }
+    .r-aside
+    {
+        font-size:0.7rem;
+    }
     .barra-r
-{
-    height:0.5rem;
-}
+    {
+        height:0.5rem;
+    }
 }

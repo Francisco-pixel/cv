@@ -19,6 +19,11 @@ conexionInternet()
 btnUp()
 tiempo()
 copiarText()
+btnUpStyle({
+    "element":".btn-subir",
+    "bg":"#5d2e64",
+    "wh":"50px"
+})
 //Títulos de la izquierda
 d.querySelectorAll(".l-aside__contacto").forEach((titulo,i)=>{
     titulo.innerText=titulos_izquierda[i];
