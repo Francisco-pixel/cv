@@ -20,6 +20,7 @@ habilidades={
     "HTML":97,
     "CSS3":90,
     "PHP":70,
+    "Git":65,
     "WordPress":95,
     "Joomla":90,
     "Illustrator":95,

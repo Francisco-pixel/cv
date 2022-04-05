@@ -39,11 +39,17 @@ loop_info_right(contacto,".contacto")
 loop_info_right(estudios,".estudios")
 loop_info_right(profesion,".profesion")
 
-//Idiomas
-Object.keys(idiomas).forEach((idioma,i)=>{
-    d.querySelector(".idioma").innerHTML+=`
-    <p class="l-aside__contacto-detail">${idioma}</p>
-    <div class="barra">
+//Títulos derecha
+d.querySelectorAll(".r-aside-profile__title").forEach((titulo,i)=>{
+    titulo.innerText=titulos_derecha[i];
+})
+
+//Idiomas y barras de la izquierda
+function cargar_barras_left(){
+    Object.keys(idiomas).forEach((idioma,i)=>{
+        d.querySelector(".idioma").innerHTML+=`
+        <p class="l-aside__contacto-detail">${idioma}</p>
+        <div class="barra">
         <div class="barra__porciento"></div>
     </div>
     `
@@ -52,24 +58,23 @@ Object.keys(idiomas).forEach((idioma,i)=>{
         d.querySelectorAll(".barra__porciento")[i].style.width=`${idiomas[idioma]}%`;
     },1000)
 })
-
-//Títulos derecha
-d.querySelectorAll(".r-aside-profile__title").forEach((titulo,i)=>{
-    titulo.innerText=titulos_derecha[i];
-})
-//Habilidades
-Object.keys(habilidades).forEach((habilidad,i)=>{
-    d.querySelector(".habilidades").innerHTML+=`
-    <p class="r-aside-profile__p">${habilidad}</p>
-    <div class="barra-r">
+}
+//Habilidades y barras de la derecha
+function cargar_barras_right(){
+    Object.keys(habilidades).forEach((habilidad,i)=>{
+        d.querySelector(".habilidades").innerHTML+=`
+        <p class="r-aside-profile__p">${habilidad}</p>
+        <div class="barra-r">
         <div class="barra__porciento-r"></div>
-    </div>
-    `
-    d.querySelectorAll(".barra__porciento-r")[i].style.width=`0%`;
-    setTimeout(()=>{
-        d.querySelectorAll(".barra__porciento-r")[i].style.width=`${habilidades[habilidad]}%`;
-    },1000)
-})
+        </div>
+        `
+        d.querySelectorAll(".barra__porciento-r")[i].style.width=`0%`;
+        setTimeout(()=>{
+            d.querySelectorAll(".barra__porciento-r")[i].style.width=`${habilidades[habilidad]}%`;
+        },1000)
+    })
+}
+
 //Experiencias laborales
 experiencias.forEach(({profesion,institucion,anios,desc})=>{
     d.querySelector(".experiencia").innerHTML+=`
@@ -84,6 +89,7 @@ experiencias.forEach(({profesion,institucion,anios,desc})=>{
     `
 })
     
-d.addEventListener("click",e=>{
-
+d.addEventListener("DOMContentLoaded",()=>{
+    cargar_barras_right()
+    cargar_barras_left()
 })
