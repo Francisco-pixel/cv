@@ -7,8 +7,8 @@ export {contacto,
     habilidades,
     experiencias};
 let contacto=["(809) 919-5135","francisco-acevedo06@hotmail.com","Calle Primera #45"],
-estudios=["SDQ Training Center, (2019)","UASD, (2018)","ITLA, (2010)","Ramón Emilio Jiménez, (2004)"],
-profesion=["Lic. Diseño Gráfico (UASD)","Desarrollo Web (SDQ)"],
+estudios=["SDQ Training Center, (2019)"," Universidad Autónoma de Santo Domingo, UASD, (2018)","Instituto Tecnológico de Las Américas, ITLA, (2010)","Ramón Emilio Jiménez, (2004)"],
+profesion=["Lic. Diseño Gráfico, (UASD)","Desarrollo Web (SDQ)"],
 titulos_izquierda=["Información de Contacto","Estudios","Profesión","Idiomas"],
 titulos_derecha=["Perfil","Experiencia laboral","Habilidades Profesionales"],
 idiomas={
