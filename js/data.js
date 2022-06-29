@@ -20,7 +20,10 @@ habilidades={
     "HTML":97,
     "CSS3":90,
     "PHP":70,
+    "React":40,
+    "NodeJs":35,
     "Git":65,
+    "Firebase":60,
     "WordPress":95,
     "Joomla":90,
     "Illustrator":95,
@@ -31,6 +34,10 @@ experiencias=[
     {"profesion":"Diseño Gráfico / Desarrollo Web",
     "institucion":"PROMESE/CAL",
     "anios":"2008-2022",
-    "desc":"Laborando desde 04-08-2008, realizando tareas como diseñador de páginas web escribiendo código en distintos lenguajes de programación, tales como: PHP, JavaScript y de maquetación web: HTML5 y CSS3, creando aplicaciones web, mantenimiento al website, subir informaciónes o contenido utilizando Content Management System o CMS como Wordpress y Joomla."
+    "desc":`Laborando desde 04-08-2008, realizando tareas como diseñador 
+    de páginas web escribiendo código en distintos lenguajes de programación, 
+    tales como: PHP, JavaScript y de maquetación web: HTML5 y CSS3, creando 
+    aplicaciones web, mantenimiento al website, subir informaciónes o contenido 
+    utilizando Content Management System o CMS como Wordpress y Joomla.`
     }
 ];
