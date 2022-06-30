@@ -38,6 +38,7 @@ experiencias=[
     de páginas web escribiendo código en distintos lenguajes de programación, 
     tales como: PHP, JavaScript y de maquetación web: HTML5 y CSS3, creando 
     aplicaciones web, mantenimiento al website, subir informaciónes o contenido 
-    utilizando Content Management System o CMS como Wordpress y Joomla.`
+    utilizando Content Management System (CMS) como Wordpress o Joomla y he trabajado 
+    en la adquisición de las Normas sobre Tenologías de la Información (NORTIC) A2 y A3.`
     }
 ];

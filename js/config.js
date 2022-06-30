@@ -88,7 +88,6 @@ experiencias.forEach(({profesion,institucion,anios,desc})=>{
     </div>
     `
 })
-    
 d.addEventListener("DOMContentLoaded",()=>{
     cargar_barras_right()
     cargar_barras_left()
