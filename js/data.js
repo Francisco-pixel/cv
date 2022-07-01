@@ -17,7 +17,7 @@ idiomas={
 },
 habilidades={
     "JavaScript":80,
-    "HTML":97,
+    "HTML5":97,
     "CSS3":90,
     "PHP":70,
     "React":40,
