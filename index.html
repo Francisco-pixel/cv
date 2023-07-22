@@ -3,55 +3,66 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://francisco-pixel.github.io/modulos/css/style.css" />
     <link rel="stylesheet" href="./css/style.css">
-    <title>CV template</title>
+    <script src="https://kit.fontawesome.com/925af5c22c.js" crossorigin="anonymous"></script>
+    <title>Curriculum</title>
 </head>
 
-<body>
-    <section class="cv">
-        <div class="cv__left">
-            <div class="cv__left-img">
-                <div>
-                    <img class="img" src="" alt="Imagen" width="auto" height="auto">
+<body class="flex--align-center">
+    <!-- Section -->
+    <section class="section grid col--3">
+        <div class="l-aside">
+            <div class="span--1 flex--align-col gap border--bottom">
+                <!-- Foto de perfil -->
+                <div class="l-aside__card-foto span--1">
+                    <img src="./img/foto.png" alt="foto" loading="lazy" class="l-aside__foto">
+                </div>
+                <!-- Nombre y profesión -->
+                <div class="l-aside__profile">
+                    <h2 class="l-aside-name">Francisco Acevedo</h2>
+                    <p class="l-aside-desc">Desarrollador Web</p>
                 </div>
             </div>
-            <div class="left__info">
-                <h2 class="nombre"></h2>
-                <p class="cargo"></p>
+            <!-- Contacto -->
+            <div class="l-aside-contacto">
+                <h3 class="l-aside__contacto"></h3>
+                <div class="contacto grid"></div>
             </div>
-            <div class="left__info">
-                <h3 class="titulo"></h3>
-                <ul class="contacto"></ul>
+            <!-- Estuidios realizados -->
+            <div class="l-aside-contacto">
+                <h3 class="l-aside__contacto"></h3>
+                <div class="estudios grid"></div>
             </div>
-            <div class="left__info">
-                <h3 class="titulo"></h3>
-                <ul class="estudios"></ul>
+            <!-- Profesión -->
+            <div class="l-aside-contacto">
+                <h3 class="l-aside__contacto"></h3>
+                <div class="profesion grid"></div>
             </div>
-            <div class="left__info">
-                <h3 class="titulo"></h3>
-                <ul class="profesión"></ul>
-            </div>
-            <div class="left__info">
-                <h3 class="titulo"></h3>
-                <ul class="idiomas"></ul>
-            </div>
-        </div>
-        <div class="cv__right">
-            <div>
-                <p class="perfil"></p>
-            </div>
-            <div>
-                <div class="right__info">
-                    <h3 class="titulo"></h3>
-                    <div class="experiencia_laboral gap--1 grid"></div>
-                </div>
-            </div>
-            <div class="right__info">
-                <h3 class="titulo"></h3>
-                <ul class="habilidades_profesionales"></ul>
+            <!-- Idiomas -->
+            <div class="l-aside-contacto">
+                <h3 class="l-aside__contacto"></h3>
+                <div class="idioma"></div>
             </div>
         </div>
+        <div class="r-aside span--2">
+            <!-- Perfil -->
+            <div class="r-aside-profile">
+                <h3 class="r-aside-profile__title"></h3>
+                <p class="r-aside-profile__p">Mucho gusto, soy desarrollador web, mi
+                    objetivo es pertenecer a una empresa que brinde oportunidades
+                    de crecimiento, para así contribuir al desarrollo de la misma,
+                    aportando mis conocimientos, dando un excelente servicio y
+                    realizando eficientemente las tareas que me asignen.</p>
+                    <!-- Experiencia laboral -->
+                <h3 class="r-aside-profile__title">Experiencia laboral</h3>
+                <div class="grid col--2 experiencia gap"></div>
+                <!-- Habilidades Profesionales -->
+                <h3 class="r-aside-profile__title">Habilidades Profesionales</h3>
+                <div class="grid col--2 gap habilidades"></div>
+            </div>
     </section>
     <script src="./js/config.js" type="module"></script>
 </body>
