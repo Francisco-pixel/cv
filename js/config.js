@@ -1,94 +1,112 @@
-import { c, d } from "https://francisco-pixel.github.io/modulos/js/data.js";
-import { conexionInternet } from "https://francisco-pixel.github.io/modulos/js/conexionInternet.js";
-import { tiempo } from "https://francisco-pixel.github.io/modulos/js/fecha.js";
-import { crearNodo } from "https://francisco-pixel.github.io/modulos/js/crearNodo.js";
-import { loaderStyle } from "https://francisco-pixel.github.io/modulos/js/loader.js";
-import { padreHijo } from "https://francisco-pixel.github.io/modulos/js/padreHijo.js";
-import { setText } from "https://francisco-pixel.github.io/modulos/js/setText.js";
-import { btnUp,btnUpStyle } from "https://francisco-pixel.github.io/modulos/js/botonSubir.js";
-import { copiarText } from "https://francisco-pixel.github.io/modulos/js/copiarText.js";
-import {contacto,
-    estudios,
-    profesion,
-    titulos_izquierda,
-    titulos_derecha,
-    idiomas,
-    habilidades,
-    experiencias} from "./data.js";
-conexionInternet()
-btnUp()
-tiempo()
-copiarText()
-btnUpStyle({
-    "element":".btn-subir",
-    "bg":"#5d2e64",
-    "wh":"50px"
-})
-//Títulos de la izquierda
-d.querySelectorAll(".l-aside__contacto").forEach((titulo,i)=>{
-    titulo.innerText=titulos_izquierda[i];
-})
+const c = console,
+    d = document,
+    $ = a => d.querySelector(a),
+    $all = a => d.querySelectorAll(a),
+    JSON = `https://raw.githubusercontent.com/Francisco-pixel/curriculum/main/data/data.json`,
+    JSON_EXTERNO="https://api.npoint.io/b51c128b91faa4e43621",
+    intervalTime = 3*1000;
 
-let loop_info_right=(arr,attr)=>{
-    arr.forEach(item=>{
-        d.querySelector(attr).innerHTML+=`
-        <p class="l-aside__contacto-detail">${item}</p>`;
+const OBTENER_API = async () => {
+    const RES = await fetch(JSON + `?${Date.now()}`),
+        DATA = await RES.json();
+    return DATA;
+}
+//setInterval(mostrarInfoLeft, intervalTime);
+mostrarInfoLeft();
+async function mostrarInfoLeft() {
+    const DATA = await OBTENER_API();
+    const TITULOS = Object.keys(splitJson(4,9));
+   
+    mostrarTitulos(TITULOS);
+    const INFO_PRINCIPAL=splitJson(0,3);
+    const INFO_ACADEMICO_Y_PROFESIONAL=splitJson(4,7);
+    const EXPERIENCIA_LABORAL=splitJson(8,8);
+    const HABILIDADES_PROFESIONALES=splitJson(9,9);
+    function splitJson(desde,hasta){
+        if(hasta<desde){
+            c.log(`%cEl índice ${hasta} debe ser mayor o igual a ${desde}`,'color:red; font-size:1rem;');
+        }
+        const NUEVO_OBJ={},
+        KEYS=Object.keys(DATA);        
+        for(let i=desde;i<=hasta;i++){
+            const KEY=KEYS[i];
+            if(KEY && DATA.hasOwnProperty(KEY)){
+                NUEVO_OBJ[KEY]=DATA[KEY];
+            }
+        }
+        return NUEVO_OBJ;
+    }
+    function buscarIndex(text){
+       return Object.keys(DATA).indexOf(text);
+    }
+    
+
+    for(const KEY in INFO_PRINCIPAL){
+        mostrarInfoPrincipal(`.${KEY}`,INFO_PRINCIPAL[KEY])
+    }
+    for(const KEY in INFO_ACADEMICO_Y_PROFESIONAL){
+        mostrarInfoAcademicoYPersonal(`.${KEY}`,INFO_ACADEMICO_Y_PROFESIONAL[KEY])
+    }
+    for(const KEY in HABILIDADES_PROFESIONALES){
+        mostrarInfoAcademicoYPersonal(`.${KEY}`,HABILIDADES_PROFESIONALES[KEY])
+    }
+    for(const KEY in EXPERIENCIA_LABORAL){
+        mostrarExperienciaLaboral(`.${KEY}`,EXPERIENCIA_LABORAL[KEY])
+    }
+
+}
+function mostrarInfoPrincipal(tag, valor) {
+    if (!$(tag)) return;
+    const EXT = /png|jpg/;
+    if (EXT.test(valor)) {
+        $(tag).src = valor;
+    } else {
+        $(tag).innerText = valor;
+    }
+}
+
+function mostrarInfoAcademicoYPersonal(tag,array) {
+    if (!$(tag)) return;   
+    $(tag).innerHTML=``;         
+        array.forEach((item,i) => {
+        $(tag).innerHTML += `<li>${item}</li>`;
     })
 }
-loop_info_right(contacto,".contacto")
-loop_info_right(estudios,".estudios")
-loop_info_right(profesion,".profesion")
 
-//Títulos derecha
-d.querySelectorAll(".r-aside-profile__title").forEach((titulo,i)=>{
-    titulo.innerText=titulos_derecha[i];
-})
-
-//Idiomas y barras de la izquierda
-function cargar_barras_left(){
-    Object.keys(idiomas).forEach((idioma,i)=>{
-        d.querySelector(".idioma").innerHTML+=`
-        <p class="l-aside__contacto-detail">${idioma}</p>
-        <div class="barra">
-        <div class="barra__porciento"></div>
-    </div>
-    `
-    d.querySelectorAll(".barra__porciento")[i].style.width=`0%`;
-    setTimeout(()=>{
-        d.querySelectorAll(".barra__porciento")[i].style.width=`${idiomas[idioma]}%`;
-    },1000)
-})
+function mostrarTitulos(titulos) {
+    let $titulo = $all('.titulo');
+    titulos.forEach((item, i) => {
+        let titulo = /_/.test(item) ? item.replace(/_/g, " ") : item;
+        if (!$titulo[i]) return;
+        $titulo[i].innerHTML = titulo;
+    })
 }
-//Habilidades y barras de la derecha
-function cargar_barras_right(){
-    Object.keys(habilidades).forEach((habilidad,i)=>{
-        d.querySelector(".habilidades").innerHTML+=`
-        <p class="r-aside-profile__p">${habilidad}</p>
-        <div class="barra-r">
-        <div class="barra__porciento-r"></div>
+
+function mostrarExperienciaLaboral(tag,experiencia){
+    if (!$(tag)) return;   
+    $(tag).innerHTML=``;  
+    experiencia.forEach(({empresa,anio,cargo,desc})=>{
+        $(tag).innerHTML+=`
+        <div class="col--2 grid gap--1">
+            <div class="centrar--item">
+                <p>${empresa}, ${anio}</p>
+            </div>
+            <div>
+                <p class="cargo">${cargo}</p>
+                <p>${desc}</p>
+            </div>
         </div>
         `
-        d.querySelectorAll(".barra__porciento-r")[i].style.width=`0%`;
-        setTimeout(()=>{
-            d.querySelectorAll(".barra__porciento-r")[i].style.width=`${habilidades[habilidad]}%`;
-        },1000)
     })
 }
-
-//Experiencias laborales
-experiencias.forEach(({profesion,institucion,anios,desc})=>{
-    d.querySelector(".experiencia").innerHTML+=`
-    <div class="grid text--align-left-center">
-        <p class="r-aside-profile__p">${anios}</p>
-        <p class="r-aside-profile__p">${institucion}</p>
-    </div>
-    <div class="grid text--align-left-center gap">
-        <h4 class="r-aside-profile__sub-title">${profesion}</h4>
-        <p class="r-aside-profile__p">${desc}</p>
-    </div>
-    `
+d.addEventListener("click",e=>{
+    if(e.target.matches('.img')){
+        print();
+    }
 })
-d.addEventListener("DOMContentLoaded",()=>{
-    cargar_barras_right()
-    cargar_barras_left()
+$('.img').addEventListener("mouseover",()=>{
+    $('.cv__right').style.height="100vh";
+})
+$('.img').addEventListener("mouseout",()=>{
+    $('.cv__right').style.height="100%";
 })
