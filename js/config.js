@@ -2,7 +2,7 @@ const c = console,
     d = document,
     $ = a => d.querySelector(a),
     $all = a => d.querySelectorAll(a),
-    JSON = `https://raw.githubusercontent.com/Francisco-pixel/curriculum/main/data/data.json`,
+    JSON = `https://raw.githubusercontent.com/Francisco-pixel/cv/main/data/data.json`,
     JSON_EXTERNO="https://api.npoint.io/b51c128b91faa4e43621",
     intervalTime = 3*1000;
 
