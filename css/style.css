@@ -1,0 +1,118 @@
+@import url(serializar.css);
+@import url(temario.css);
+:root{
+    --bg-body:hsl(0 0% 97%);
+    --color-detalle:hsl(48 89% 50%);
+    --color-border-img:hsl(48 89% 80%);
+    --color-titulo:hsl(210, 29%, 24%);
+    --color-subtitulo:hsl(0, 0%, 40%);
+    --color-text:hsl(0, 0%, 40%);
+    --color-header-h1:hsl(288, 46%, 24%);
+    --border-color:2px solid var(--color-detalle);
+}
+body {
+    background: var(--bg-body);
+    display:grid;
+    place-items:center;
+    height:100dvh;
+}
+#cv {
+    width: min(800px,100%);
+    margin:auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .img{
+        width:7em;
+        aspect-ratio:1;
+        object-fit:cover;
+        border-radius:50%;
+        border:.2em solid var(--color-border-img);
+        cursor: pointer;
+    }
+    h1{
+        font-size: 28px;
+        margin: 10px 0;
+        color: var(--color-header-h1);
+    }
+    h2{
+        font-size: 20px;
+        margin: 5px 0;
+        color: var(--color-subtitulo);
+    }
+    p{
+        font-size: 14px;
+        margin: 5px 0;
+        color: var(--color-subtitulo);  
+    }
+}
+
+
+/* Secciones */
+.section {
+    margin-bottom: 20px;
+    h2{
+        font-size: 20px;
+        margin: 20px 0 10px;
+        color: var(--color-titulo);
+        border-bottom: var(--border-color);
+        padding-bottom: 5px;
+    }
+    h3 {
+        font-size: 18px;
+        margin: 15px 0 5px;
+        color: var(--color-subtitulo);
+    }
+    p{
+        font-size: 14px;
+        margin: 5px 0;
+        color: var(--color-subtitulo);  
+    }
+    ul{
+        list-style:none;
+    }
+}
+
+
+/* Experiencia laboral */
+.experiencia-laboral div {
+    margin-bottom: 20px;
+}
+
+.experiencia-laboral h3 {
+    color: #2c3e50;
+}
+
+.experiencia-laboral p {
+    color: #666;
+}
+
+/* Habilidades */
+.habilidades ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades ul li {
+    background: var(--color-detalle);
+    color: var(--color-header-h1);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+@media print{
+    body{
+        background:#fff;
+    }
+    #cv {
+        box-shadow:none;
+    }
+}

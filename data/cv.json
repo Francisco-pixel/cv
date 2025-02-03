@@ -1,0 +1,113 @@
+{
+    "img": "./img/foto.png",
+    "nombre": "Francisco Acevedo",
+    "cargo": "Desarrollador web",
+    "experiencia_inicial":"2017",
+    "perfil": "experiencia en el desarrollo de aplicaciones web, con sólidos conocimientos en frontend y backend.",
+    "contacto": [
+        "(809) 919-5135",
+        "francisco-acevedo06@hotmail.com",
+        "Av. Independencia, Santo Domingo, República Dominicana"
+    ],
+    "estudios": [
+        "Universidad Autónoma de Santo Domingo, UASD: Lic. en Diseño Gráfico, (2018)",
+        "Udemy: Node.js, JavaScript, React, (2023)",
+        "SDQ Training Center: PHP, SQL, HTML5, CSS3, (2019)"
+    ],
+    "idiomas": [
+        "Español",
+        "Inglés intermedio"
+    ],
+    "experiencia_laboral": [
+        
+        [
+            "IDEICE",
+            "2022 - Presente",
+            "Desarrollo web",
+            "Laborando desde 01-08-2022 en el Departamento de TIC, realizando tareas como desarrollador web tales como: mantenimiento y desarrollo de módulos de la intranet institucional, creación de aplicaciones web, soporte técnico en la interfaz de usuario de la Revista de Investigación y Evaluación Educativa (revie), y mantenimiento del sitio web institucional, Observatorio de Políticas Educativas de la República Dominicana (OPERD)."
+        ],
+        [
+            "Promese/Cal",
+            "2008-2022",
+            "Diseñador de páginas web",
+            "Laborando desde 04-08-2008, realizando tareas de diseñador de páginas web escribiendo código en distintos lenguajes de programación, tales como: PHP, JavaScript y de maquetación web: HTML5 y CSS3, creando aplicaciones web, mantenimiento al website, crear los artes para las redes sociales y sitio web institucional, subir informaciones o contenido utilizando Content Management System (CMS) como Wordpress o Joomla y he trabajado en la adquisición de las Normas sobre Tenologías de la Información (NORTIC) A2 y A3."
+        ]
+    ],
+    "habilidades_profesionales": [
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "PHP",
+        "SQL",
+        "React",
+        "NodeJs",
+        "Git",
+        "WordPress",
+        "Joomla",
+        "Power BI",
+        "Illustrator",
+        "Photoshop",
+        "InDesign"
+    ],
+    
+    "proyectos_laborales": [
+        ["IDEICE",            
+                [[
+                    "https://operd.gob.do/",
+                    "Observatorio Institucional (OPERD)",
+                    "Plataforma para la consulta de datos, indicadores e informes del sistema educativo dominicano, desarrollada con HTML, CSS3, JavaScript y PHP."
+                ]]            
+        ],
+        ["Promese/cal",       
+                [[
+                    "https://promesecal.gob.do/transparencia/phocadownload/Organigrama/",
+                    "Organigrama Interactivo",
+                    "Organigrama interactivo con perfiles de los empleados de la institución. Incluye función de lectura de la descripción de cada empleado. Desarrollado con HTML, CSS3 y JavaScript."
+                ],            
+                [
+                    "https://promesecal.gob.do/phocadownload/tabla-de-medicamentos/",
+                    "Tabla de Medicamentos",
+                    "Aplicación de medicamentos para las Farmacias del Pueblo que muestra productos, descripciones y precios, e incluye un buscador en tiempo real. Desarrollada con HTML, CSS3 y JavaScript."
+                ],            
+                [
+                    "https://promesecal.gob.do/phocadownload/farmacias-del-pueblo/",
+                    "Farmacias del Pueblo",
+                    "Aplicación que muestra todas las Farmacias del Pueblo en R.D., con buscador en tiempo real. Desarrollada con HTML, CSS3 y JavaScript."
+                ] ]        
+        ]
+    ],
+    "proyectos_personales": [
+        ["GitHub", 
+                [[
+                    "https://francisco-pixel.github.io/cv/",
+                    "CV",
+                    "Este es mi CV en línea, imprimible al hacer clic en la foto de perfil. Desarrollado con HTML, CSS3 y JavaScript."
+                ],            
+                [
+                    "https://francisco-pixel.github.io/landing-page/",
+                    "Landing Page",
+                    "Una página de aterrizaje desarrollada con HTML, CSS3 y JavaScript."
+                ],            
+                [
+                    "https://francisco-pixel.github.io/calendario/",
+                    "Calendario",
+                    "Un calendario que muestra las efemérides de R.D., desarrollado con HTML, CSS3 y JavaScript."
+                ],         
+                [
+                    "https://francisco-pixel.github.io/mi-dispositivo/",
+                    "Mi Dispositivo",
+                    "Aplicación web que identifica el dispositivo del usuario, mostrando la resolución de pantalla, el navegador y el tipo de dispositivo (Android, iPhone, etc.). Desarrollada con HTML, CSS3 y JavaScript."
+                ],         
+                [
+                    "https://francisco-pixel.github.io/birthdays/",
+                   "Birthdays",
+                   "Aplicación web que recuerda los cumpleaños de nuestros seres queridos, enviando una notificación en computadoras de escritorio o portátiles y permitiendo enviar un mensaje preprogramado por WhatsApp. Desarrollada con HTML, CSS3 y JavaScript."
+                ],         
+                [
+                    "https://francisco-pixel.github.io/reproductor-de-musica/",
+                    "Reproductor de Música",
+                   "Reproductor de música web con pistas integradas. La aplicación aún no permite subir música. Desarrollada con HTML, CSS3 y JavaScript."
+                ] ]       
+        ]
+    ]
+}
