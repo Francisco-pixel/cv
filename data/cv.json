@@ -50,15 +50,15 @@
         "InDesign"
     ],
     
-    "proyectos_laborales": [
-        ["IDEICE","https://operd.gob.do/",            
+    "proyectos": [
+        ["IDEICE","Proyectos laborales","https://operd.gob.do/",            
                 [[
                     "",
                     "Observatorio Institucional (OPERD)",
                     "Plataforma para la consulta de datos, indicadores e informes del sistema educativo dominicano, desarrollada con HTML, CSS3, JavaScript y PHP."
                 ]]            
         ],
-        ["Promese/cal","https://promesecal.gob.do/",       
+        ["Promese/cal","Proyectos laborales","https://promesecal.gob.do/",       
                 [[
                     "transparencia/phocadownload/Organigrama/",
                     "Organigrama Interactivo",
@@ -74,10 +74,8 @@
                     "Farmacias del Pueblo",
                     "Aplicación que muestra todas las Farmacias del Pueblo en R.D., con buscador en tiempo real. Desarrollada con HTML, CSS3 y JavaScript."
                 ] ]        
-        ]
-    ],
-    "proyectos_personales": [
-        ["GitHub", "https://francisco-pixel.github.io/",
+        ],
+        ["GitHub","Proyectos personales","https://francisco-pixel.github.io/",
                 [[
                     "cv/",
                     "CV",
