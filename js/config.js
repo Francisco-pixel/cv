@@ -33,23 +33,23 @@ function crearCV(data) {
             `).join('')}
         </div>
         <div class="section">            
-            ${data.proyectos_laborales.map(([nombre,array]) => `
+            ${data.proyectos_laborales.map(([nombre,enlace,array]) => `
                 <h2>Proyectos Laborales (${nombre})</h2>
-            ${array.map(([enlace,app,desc])=>{
+            ${array.map(([dir,app,desc])=>{
                 return `<div class="proyecto">
-                    <h3>${app} - <a href="${enlace}" target="_blank">Enlace</a></h3>
+                    <h3>${app} - <a href="${enlace}${dir}" target="_blank">Enlace</a></h3>
                     <p>${desc}</p>
                 </div>`
                 }).join('')}
                 
             `).join('')}
         </div>
-        <div class="section">            
-            ${data.proyectos_personales.map(([nombre,array]) => `
+        <div class="section">      
+            ${data.proyectos_personales.map(([nombre,enlace,array]) => `
                 <h2>Proyectos Personales (${nombre})</h2>
-            ${array.map(([enlace,app,desc])=>{
+            ${array.map(([dir,app,desc])=>{
                 return `<div class="proyecto">
-                    <h3>${app} - <a href="${enlace}" target="_blank">Enlace</a></h3>
+                    <h3>${app} - <a href="${enlace}${dir}" target="_blank">Enlace</a></h3>
                     <p>${desc}</p>
                 </div>`
                 }).join('')}

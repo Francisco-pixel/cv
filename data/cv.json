@@ -51,60 +51,60 @@
     ],
     
     "proyectos_laborales": [
-        ["IDEICE",            
+        ["IDEICE","https://operd.gob.do/",            
                 [[
-                    "https://operd.gob.do/",
+                    "",
                     "Observatorio Institucional (OPERD)",
                     "Plataforma para la consulta de datos, indicadores e informes del sistema educativo dominicano, desarrollada con HTML, CSS3, JavaScript y PHP."
                 ]]            
         ],
-        ["Promese/cal",       
+        ["Promese/cal","https://promesecal.gob.do/",       
                 [[
-                    "https://promesecal.gob.do/transparencia/phocadownload/Organigrama/",
+                    "transparencia/phocadownload/Organigrama/",
                     "Organigrama Interactivo",
                     "Organigrama interactivo con perfiles de los empleados de la institución. Incluye función de lectura de la descripción de cada empleado. Desarrollado con HTML, CSS3 y JavaScript."
                 ],            
                 [
-                    "https://promesecal.gob.do/phocadownload/tabla-de-medicamentos/",
+                    "phocadownload/tabla-de-medicamentos/",
                     "Tabla de Medicamentos",
                     "Aplicación de medicamentos para las Farmacias del Pueblo que muestra productos, descripciones y precios, e incluye un buscador en tiempo real. Desarrollada con HTML, CSS3 y JavaScript."
                 ],            
                 [
-                    "https://promesecal.gob.do/phocadownload/farmacias-del-pueblo/",
+                    "phocadownload/farmacias-del-pueblo/",
                     "Farmacias del Pueblo",
                     "Aplicación que muestra todas las Farmacias del Pueblo en R.D., con buscador en tiempo real. Desarrollada con HTML, CSS3 y JavaScript."
                 ] ]        
         ]
     ],
     "proyectos_personales": [
-        ["GitHub", 
+        ["GitHub", "https://francisco-pixel.github.io/",
                 [[
-                    "https://francisco-pixel.github.io/cv/",
+                    "cv/",
                     "CV",
                     "Este es mi CV en línea, imprimible al hacer clic en la foto de perfil. Desarrollado con HTML, CSS3 y JavaScript."
                 ],            
                 [
-                    "https://francisco-pixel.github.io/landing-page/",
+                    "landing-page/",
                     "Landing Page",
                     "Una página de aterrizaje desarrollada con HTML, CSS3 y JavaScript."
                 ],            
                 [
-                    "https://francisco-pixel.github.io/calendario/",
+                    "calendario/",
                     "Calendario",
                     "Un calendario que muestra las efemérides de R.D., desarrollado con HTML, CSS3 y JavaScript."
                 ],         
                 [
-                    "https://francisco-pixel.github.io/mi-dispositivo/",
+                    "mi-dispositivo/",
                     "Mi Dispositivo",
                     "Aplicación web que identifica el dispositivo del usuario, mostrando la resolución de pantalla, el navegador y el tipo de dispositivo (Android, iPhone, etc.). Desarrollada con HTML, CSS3 y JavaScript."
                 ],         
                 [
-                    "https://francisco-pixel.github.io/birthdays/",
+                    "birthdays/",
                    "Birthdays",
                    "Aplicación web que recuerda los cumpleaños de nuestros seres queridos, enviando una notificación en computadoras de escritorio o portátiles y permitiendo enviar un mensaje preprogramado por WhatsApp. Desarrollada con HTML, CSS3 y JavaScript."
                 ],         
                 [
-                    "https://francisco-pixel.github.io/reproductor-de-musica/",
+                    "reproductor-de-musica/",
                     "Reproductor de Música",
                    "Reproductor de música web con pistas integradas. La aplicación aún no permite subir música. Desarrollada con HTML, CSS3 y JavaScript."
                 ] ]       
