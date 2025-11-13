@@ -36,8 +36,9 @@ function crearCV(data) {
             ${data.proyectos.map(([nombre,proyecto,enlace,array]) => `
                 <h2>${proyecto} (${nombre})</h2>
             ${array.map(([dir,app,desc])=>{
+                const nuevoEnlace = /https?/.test(dir) ? `${dir}` : `${enlace}${dir}`;
                 return `<div class="proyecto">
-                    <h3>${app} - <a href="${enlace}${dir}" target="_blank">Enlace</a></h3>
+                    <h3>${app} - <a href="${nuevoEnlace}" target="_blank">Enlace</a></h3>
                     <p>${desc}</p>
                 </div>`
                 }).join('')}

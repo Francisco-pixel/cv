@@ -39,10 +39,15 @@
         "CSS3",
         "PHP",
         "SQL",
+        "NoSQL",
+        "Cloud Native",
+        "DevOps",
+        "Agile",
         "React",
         "NodeJs",
         "Python",
         "Git",
+        "Github",
         "WordPress",
         "Joomla",
         "Power BI",
@@ -52,12 +57,19 @@
     ],
     
     "proyectos": [
-        ["IDEICE","Proyectos laborales","https://operd.gob.do/",            
-                [[
+        ["IDEICE","Proyectos laborales","https://operd.gob.do/",         
+                [
+                [
                     "",
                     "Observatorio Institucional (OPERD)",
                     "Plataforma para la consulta de datos, indicadores e informes del sistema educativo dominicano, desarrollada con HTML, CSS3, JavaScript y PHP."
-                ]]            
+                ],
+                [
+                    "https://ideice.gob.do/sobre-nosotros/organigrama",
+                    "Organigrama Interactivo",
+                    "Organigrama interactivo con perfiles de los empleados de la institución. Desarrollado con HTML, CSS3 y JavaScript."
+                ]
+            ]          
         ],
         ["Promese/cal","Proyectos laborales","https://promesecal.gob.do/",       
                 [[
