@@ -115,4 +115,11 @@ body {
     #cv {
         box-shadow:none;
     }
+    .proyecto{
+        h3{
+            a{
+                display:none;
+            }
+        }
+    }
 }
