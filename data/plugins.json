@@ -1,0 +1,15 @@
+[
+  {
+    "selector": "#cv .header h1",
+    "pipeline": [
+      { "accion": "agregarAtributos", "valor": { "class": "nombre-cv" } },
+      { "accion": "agregarIcono", "valor": "👨‍💻" }
+    ]
+  },
+  {
+    "selector": "#shortenBtn",
+    "pipeline": [
+      { "accion": "agregarAtributos", "valor": { "class": "btn-primary" } }
+    ]
+  }
+]

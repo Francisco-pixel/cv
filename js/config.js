@@ -1,8 +1,8 @@
 const c=console.log,
 d=document,
-taq=a=>d.querySelector(a),
-taqs=a=>d.querySelectorAll(a);
-const $cv = taq('#cv');
+tag=a=>d.querySelector(a),
+tags=a=>d.querySelectorAll(a);
+const $cv = tag('#cv');
 
 function crearCV(data) {
 
@@ -62,10 +62,47 @@ function crearCV(data) {
     `;
 }
 
+// Sistema de acciones y runner de plugins (data-driven)
+const acciones = {
+    agregarTexto: ({elemento,valor}) => { elemento.textContent = valor; return elemento; },
+    agregarEstilosCSS: ({elemento,valor}) => { Object.assign(elemento.style, valor); return elemento; },
+    agregarAtributos: ({elemento,valor}) => { Object.entries(valor).forEach(([k,v]) => elemento.setAttribute(k,v)); return elemento; },
+    agregarIcono: ({elemento,valor}) => { elemento.textContent = `${valor} ${elemento.textContent}`; return elemento; }
+};
 
-fetch('./data/cv.json')
-.then(res=>res.json())
-.then(data=>crearCV(data))// Llamar a la función para crear el currículum
+function ejecutarPipeline(elemento, pipeline){
+    return pipeline.reduce((el, {accion, valor}) => {
+        const fn = acciones[accion];
+        if(!fn){ console.warn(`Acción desconocida: ${accion}`); return el; }
+        return fn({elemento: el, valor});
+    }, elemento);
+}
+
+function ejecutarPlugins(plugins){
+    plugins.forEach(({selector, pipeline}) => {
+        const elementos = tags(selector);
+        elementos.forEach(el => ejecutarPipeline(el, pipeline));
+    });
+}
+
+// Cargar múltiples JSON en paralelo usando Promise.all (fetchAll)
+const jsonFiles = ['./data/cv.json', './data/plugins.json'];
+
+function fetchAllJson(paths){
+    return Promise.all(paths.map(p =>
+        fetch(p)
+            .then(r => { if(!r.ok) throw new Error(`${p} ${r.status}`); return r.json(); })
+            .catch(err => { console.warn('No se pudo cargar', p, err); return null; })
+    ));
+}
+
+fetchAllJson(jsonFiles)
+    .then(([cvData, plugins]) => {
+        if(!cvData) return console.error('No se pudo cargar el CV desde', jsonFiles[0]);
+        crearCV(cvData); // renderizar
+        if(Array.isArray(plugins) && plugins.length) ejecutarPlugins(plugins);
+    })
+    .catch(err => console.error('Error en fetchAllJson:', err));
 
 d.addEventListener('click',e=>{
     if(e.target.matches('.img')){

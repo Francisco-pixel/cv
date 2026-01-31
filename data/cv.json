@@ -58,15 +58,15 @@
     ],
     
     "proyectos": [
-        ["IDEICE","Proyectos laborales","https://operd.gob.do/",         
+        ["IDEICE","Proyectos laborales","https://ideice.gob.do/",         
                 [
                 [
-                    "",
-                    "Observatorio Institucional (OPERD)",
-                    "Plataforma para la consulta de datos, indicadores e informes del sistema educativo dominicano, desarrollada con HTML, CSS3, JavaScript y PHP."
-                ],
+                    "acortador-de-enlaces/",
+                    "Acortador de Enlaces",
+                    "Aplicación para acortar enlaces desarrollada por mí (IDEICE). Incluye frontend y API en PHP y JavaScript."
+                ],                 
                 [
-                    "https://ideice.gob.do/sobre-nosotros/organigrama",
+                    "sobre-nosotros/organigrama",
                     "Organigrama Interactivo",
                     "Organigrama interactivo con perfiles de los empleados de la institución. Desarrollado con HTML, CSS3 y JavaScript."
                 ]
@@ -109,12 +109,7 @@
                     "mi-dispositivo/",
                     "Mi Dispositivo",
                     "Aplicación web que identifica el dispositivo del usuario, mostrando la resolución de pantalla, el navegador y el tipo de dispositivo (Android, iPhone, etc.). Desarrollada con HTML, CSS3 y JavaScript."
-                ],         
-                [
-                    "birthdays/",
-                   "Birthdays",
-                   "Aplicación web que recuerda los cumpleaños de nuestros seres queridos, enviando una notificación en computadoras de escritorio o portátiles y permitiendo enviar un mensaje preprogramado por WhatsApp. Desarrollada con HTML, CSS3 y JavaScript."
-                ],         
+                ],        
                 [
                     "reproductor-de-musica/",
                     "Reproductor de Música",
