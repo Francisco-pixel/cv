@@ -63,7 +63,7 @@
                 [
                     "acortador-de-enlaces/",
                     "Acortador de Enlaces",
-                    "Aplicación para acortar enlaces desarrollada por mí (IDEICE). Incluye frontend y API en PHP y JavaScript."
+                    "Herramienta para crear enlaces cortos seguros, rápidos y rastreables (clics contados). Desarrollada con PHP + JavaScript. Enlace protegido, acortamiento instantáneo y estadísticas de uso."
                 ],                 
                 [
                     "sobre-nosotros/organigrama",
